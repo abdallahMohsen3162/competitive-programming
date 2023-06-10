@@ -1,4 +1,4 @@
-#define ll long long
+//#define ll long long
 
 ll mod = 1e9 + 7;
 
