@@ -25,9 +25,7 @@ public:
     }
 
     void print(){
-        for(auto i:ms){
-            cout << i << " ";
-        }
+        for(auto i:ms) cout << i << " ";
         cout << "\n";
     }
 
