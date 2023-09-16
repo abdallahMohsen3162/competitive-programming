@@ -28,6 +28,7 @@ public:
         for(auto i:ms){
             cout << i << " ";
         }
+        cout << "\n";
     }
 
 };
