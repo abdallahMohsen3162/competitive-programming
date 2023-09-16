@@ -6,11 +6,11 @@ private:
 public:
     Binary_search_tree(){}
 
-    void push(int x){
+    void push(int x){//~O(log(N))
         ms.insert(x);
     }
 
-    bool pop(int x){
+    bool pop(int x){//O(log(N))
         multiset<int>::iterator it;
         it = ms.find(x);
         if(it != ms.end()){
@@ -20,7 +20,7 @@ public:
         return false;
     }
 
-    int size(){
+    int size(){//O(1)
         return ms.size();
     }
 
