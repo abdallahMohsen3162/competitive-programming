@@ -5,6 +5,14 @@ ll mul(ll a, ll b){
     return ((a%mod) * (b%mod))%mod;
 }
 
+int nearest_multible(int x, int m){
+    return round(x/m)*m;
+}
+
+double log_to_base(int x, int base){
+    return (log10(x)/log10(base));
+}
+
 //fast power
 ll fastPower(ll a,ll b){
 	ll res = 1;
