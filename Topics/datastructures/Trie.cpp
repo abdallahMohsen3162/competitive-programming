@@ -34,12 +34,14 @@ public:
     void insert(string str){
         Node* temp = root;
         for(int i=0;i<str.size();i++){
+
             char c = str[i];
             if(temp->mp.find(c) == temp->mp.end()){
                 temp->mp[c] = new Node();
             }
-            temp->pref++;
+
             temp = temp->mp[c];
+            temp->pref++;
         }
         temp->leaf = true;
     }
@@ -62,8 +64,10 @@ public:
         }
         if(temp == nullptr) return;
          for(char c='a';c<='z';c++){
-            if(temp->pref == sz){
-                maxPref(temp->mp[c], cur_str + c, sz);
+            if(temp->mp[c]){
+                if(temp->mp[c]->pref == sz){
+                    maxPref(temp->mp[c], cur_str + c, sz);
+                }
             }
          }
     }
@@ -72,10 +76,13 @@ public:
 
 
 void tc(){
-    Trie *tr = new Trie();
-    tr->insert("abdul");
-    cout << tr->search("abduld");
-
+    Trie tr;
+    tr.insert("abdu");
+    tr.insert("abdul");
+    // cout << tr.search("asd");
+    char c;
+    tr.maxPref(tr.root,"", 2);
+    cout << tr.mx_pref;
 }
 
 int32_t main()
