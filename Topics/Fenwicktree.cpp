@@ -12,7 +12,7 @@ public:
         while(x){
             sum += BIT[x];
             // cout << x << "\n";
-            x = remove_last_bit(x);
+            x -= (x & -x); 
         }
         return sum;
     }
