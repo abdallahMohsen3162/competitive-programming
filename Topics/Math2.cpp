@@ -25,6 +25,13 @@ bool is_prime(int x){
 }
 
 
+void PFs(int x, vector<int>&mp){
+	for(int i = 2; i * i <= x; i++){
+    while(x % i == 0 && x > 0) mp[i]++, x /= i;
+  }
+  if(x > 1)
+    mp[x]++;
+}
 
 
 
