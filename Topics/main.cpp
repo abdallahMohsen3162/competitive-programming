@@ -16,7 +16,7 @@
 #define no cout << "No\n";
 #define all(stl) stl.begin(), stl.end()
 #define mem(DATASTRUC, VAL) memset(DATASTRUC,  VAL, sizeof(DATASTRUC))
-#define debug(xx) cout << (#xx) << " = " << xx << endl;
+#define dbg(xx) cout << (#xx) << " = " << xx << endl;
 #define ll long long
 #define sprt cout << "--------------------\n";
 using namespace std;
